@@ -12,10 +12,10 @@ jobs:
       run:
         shell: bash -el {0}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: environment.yml
           cache-environment: true
       - name: Run every project in --quick mode
-        run: ./run_smoke_tests.sh
+        run: bash run_smoke_tests.sh
