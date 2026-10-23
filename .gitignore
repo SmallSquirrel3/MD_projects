@@ -1,0 +1,10 @@
+results/
+*.dcd
+*.xtc
+*.chk
+*.nc
+__pycache__/
+.ipynb_checkpoints/
+*.log
+ligand_params.json
+.DS_Store

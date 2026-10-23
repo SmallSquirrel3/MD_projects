@@ -1,0 +1,30 @@
+# conda env create -f environment.yml && conda activate md-portfolio
+# Linux and macOS (Intel and Apple Silicon). On Windows use WSL2: PySCF has no native Windows build.
+name: md-portfolio
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - jupyterlab
+  # molecular dynamics
+  - openmm>=8.1
+  - pdbfixer
+  - openmmforcefields>=0.14
+  - openmmtools>=0.23
+  - openff-toolkit>=0.16
+  - openff-nagl
+  - openff-nagl-models
+  - rdkit
+  - pymbar>=4
+  # analysis and visualisation
+  - mdanalysis>=2.8
+  - nglview
+  # quantum chemistry
+  - pyscf>=2.5
+  - geometric
+  - pip
+  - pip:
+      - pyscf-dispersion   # D3/D4 corrections for PySCF
+      - PeptideBuilder     # ideal helices for project 07
